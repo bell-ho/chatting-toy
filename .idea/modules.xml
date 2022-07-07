@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/react-sleact.iml" filepath="$PROJECT_DIR$/.idea/react-sleact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/react-sleact.iml" filepath="$PROJECT_DIR$/react-sleact.iml" />
     </modules>
   </component>
 </project>
