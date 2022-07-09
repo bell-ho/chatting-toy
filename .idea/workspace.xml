@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="웹팩 설정">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/index.html" afterDir="false" />
+    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="프로젝트 시작">
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/hooks/useInputs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/style.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/client.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/client.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,27 +38,37 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.43&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/react-sleact&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\workspace\\react-sleact\\sleact\\alecture\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15527344&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ide.date.format&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\이종호\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5921.22\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "javascript.nodejs.core.library.configured.version": "16.15.0",
+    "javascript.nodejs.core.library.typings.version": "16.11.43",
+    "jdk.selected.JAVA_MODULE": "azul-11",
+    "last_opened_file_path": "C:/workspace/react-sleact/sleact/alecture/pages/SignUp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\workspace\\react-sleact\\sleact\\alecture\\node_modules\\prettier",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15527344",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "ide.date.format",
+    "ts.external.directory.path": "C:\\Users\\이종호\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5921.22\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\react-sleact\sleact\alecture\pages\SignUp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\react-sleact\sleact\alecture" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -66,7 +84,7 @@
       <workItem from="1657213800010" duration="747000" />
       <workItem from="1657214561195" duration="668000" />
       <workItem from="1657215242715" duration="3436000" />
-      <workItem from="1657349446884" duration="1758000" />
+      <workItem from="1657349446884" duration="5231000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
@@ -98,7 +116,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="웹팩 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="웹팩 설정" />
+    <MESSAGE value="프로젝트 시작" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로젝트 시작" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
