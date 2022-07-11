@@ -1,11 +1,42 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Button, Error, Form, Header, Input, Label, LinkContainer, Success } from './styles';
 import useInputs from '@hooks/useInputs';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
-  const [{ email }, onChange, reset] = useInputs({
+  const [{ email, nickname }, onChange, reset] = useInputs({
     email: '',
+    nickname: '',
   });
+  const [password, setPassword] = useState('');
+  const [passwordCheck, setPasswordCheck] = useState('');
+  const [misMatchError, setMisMatchError] = useState(false);
+
+  const onChangePassword = useCallback(
+    (e) => {
+      setPassword(e.target.value);
+      setMisMatchError(e.target.value !== passwordCheck);
+    },
+    [passwordCheck],
+  );
+
+  const onChangePasswordCheck = useCallback(
+    (e) => {
+      setPasswordCheck(e.target.value);
+      setMisMatchError(e.target.value !== password);
+    },
+    [password],
+  );
+
+  const onSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!misMatchError && nickname) {
+        console.log('회원 가입');
+      }
+    },
+    [email, nickname, password, passwordCheck, misMatchError, nickname],
+  );
 
   return (
     <div id="container">
@@ -14,13 +45,13 @@ const SignUp = () => {
         <Label id="email-label">
           <span>이메일 주소</span>
           <div>
-            <Input type="email" id="email" name="email" value={email} onChange={onChangeEmail} />
+            <Input type="email" id="email" name="email" value={email} onChange={onChange} />
           </div>
         </Label>
         <Label id="nickname-label">
           <span>닉네임</span>
           <div>
-            <Input type="text" id="nickname" name="nickname" value={nickname} onChange={onChangeNickname} />
+            <Input type="text" id="nickname" name="nickname" value={nickname} onChange={onChange} />
           </div>
         </Label>
         <Label id="password-label">
@@ -34,16 +65,16 @@ const SignUp = () => {
           <div>
             <Input
               type="password"
-              id="password-check"
-              name="password-check"
+              id="passwordCheck"
+              name="passwordCheck"
               value={passwordCheck}
               onChange={onChangePasswordCheck}
             />
           </div>
-          {mismatchError && <Error>비밀번호가 일치하지 않습니다.</Error>}
+          {misMatchError && <Error>비밀번호가 일치하지 않습니다.</Error>}
           {!nickname && <Error>닉네임을 입력해주세요.</Error>}
-          {signUpError && <Error>{signUpError}</Error>}
-          {signUpSuccess && <Success>회원가입되었습니다! 로그인해주세요.</Success>}
+          {/*{signUpError && <Error>{signUpError}</Error>}*/}
+          {/*{signUpSuccess && <Success>회원가입되었습니다! 로그인해주세요.</Success>}*/}
         </Label>
         <Button type="submit">회원가입</Button>
       </Form>

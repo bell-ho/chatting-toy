@@ -41,10 +41,8 @@ export const Input = styled.input`
   width: 100%;
   color: rgba(var(--sk_primary_foreground, 29, 28, 29), 1);
   background-color: rgba(var(--sk_primary_background, 255, 255, 255), 1);
-  padding: 12px;
   height: 44px;
-  padding-top: 11px;
-  padding-bottom: 13px;
+  padding: 11px 12px 13px;
   font-size: 18px;
   line-height: 1.33333333;
 
