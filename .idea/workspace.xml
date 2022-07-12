@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="로그인, 회원가입 컴포넌트 구현중">
+    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/styles.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +83,8 @@
       <workItem from="1657214561195" duration="668000" />
       <workItem from="1657215242715" duration="3436000" />
       <workItem from="1657349446884" duration="5297000" />
-      <workItem from="1657556708820" duration="2441000" />
+      <workItem from="1657556708820" duration="2649000" />
+      <workItem from="1657628081478" duration="3257000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
@@ -118,7 +118,8 @@
     <MESSAGE value="웹팩 설정" />
     <MESSAGE value="프로젝트 시작" />
     <MESSAGE value="로그인, 회원가입 컴포넌트 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인, 회원가입 컴포넌트 구현중" />
+    <MESSAGE value="회원가입 구현중" />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 구현중" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
