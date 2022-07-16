@@ -2,11 +2,7 @@ import React from 'react';
 import Workspace from '@layouts/Workspace';
 
 const DirectMessage = () => {
-  return (
-    <Workspace>
-      <div>ggg</div>
-    </Workspace>
-  );
+  return <div>디엠</div>;
 };
 
 export default DirectMessage;

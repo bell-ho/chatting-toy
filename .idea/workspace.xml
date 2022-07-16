@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Menu/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Menu/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Modal/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Modal/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/client.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/client.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,31 +43,33 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.43&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;azul-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/react-sleact/sleact/alecture/pages/SignUp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\workspace\\react-sleact\\sleact\\alecture\\node_modules\\prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15527344&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ide.date.format&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\이종호\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5921.22\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "javascript.nodejs.core.library.configured.version": "16.15.0",
+    "javascript.nodejs.core.library.typings.version": "16.11.43",
+    "jdk.selected.JAVA_MODULE": "azul-11",
+    "last_opened_file_path": "C:/workspace/react-sleact/sleact/alecture/components/Modal",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\workspace\\react-sleact\\sleact\\alecture\\node_modules\\prettier",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15527344",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "ide.date.format",
+    "ts.external.directory.path": "C:\\Users\\이종호\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5921.22\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\react-sleact\sleact\alecture\components\Modal" />
+      <recent name="C:\workspace\react-sleact\sleact\alecture\pages\Channel" />
       <recent name="C:\workspace\react-sleact\sleact\alecture\pages\SignUp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +97,7 @@
       <workItem from="1657556708820" duration="2649000" />
       <workItem from="1657628081478" duration="3257000" />
       <workItem from="1657727524907" duration="2689000" />
-      <workItem from="1657950184642" duration="8132000" />
+      <workItem from="1657950184642" duration="13592000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
