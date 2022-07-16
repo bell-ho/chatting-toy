@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/utils/fetcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/client.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/client.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
@@ -64,6 +67,8 @@
       <recent name="C:\workspace\react-sleact\sleact\alecture\pages\SignUp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\react-sleact\sleact\alecture\layouts\App" />
+      <recent name="C:\workspace\react-sleact\sleact\alecture\layouts\Workspace." />
       <recent name="C:\workspace\react-sleact\sleact\alecture" />
     </key>
   </component>
@@ -85,7 +90,8 @@
       <workItem from="1657349446884" duration="5297000" />
       <workItem from="1657556708820" duration="2649000" />
       <workItem from="1657628081478" duration="3257000" />
-      <workItem from="1657727524907" duration="2414000" />
+      <workItem from="1657727524907" duration="2689000" />
+      <workItem from="1657950184642" duration="8132000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
