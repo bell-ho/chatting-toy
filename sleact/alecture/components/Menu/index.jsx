@@ -1,10 +1,14 @@
 import React, { useCallback } from 'react';
 import { CloseModalButton, CreateMenu } from '@components/Menu/styles';
 
-const Menu = ({ children, style, onCloseModal }) => {
+const Menu = ({ children, style, onCloseModal, show }) => {
   const stopPropagation = useCallback((e) => {
     e.stopPropagation(); //부모 이벤트 버블링 막기
   }, []);
+
+  if (!show) {
+    return null;
+  }
 
   return (
     <CreateMenu onClick={onCloseModal}>

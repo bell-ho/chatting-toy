@@ -22,3 +22,8 @@ layouts - 공통 레이아웃
 stopPropagation : 현재 이벤트가 캡처링/버블링 단계에서 더 이상 전파되지 않도록 방지 (부모에게 전파되는 등..)
 
 preventDefault : form을 전송할땐 새로고침안되게 preventDefault 사용
+
+## 0718
+Invalid hook call 에러 : 리턴아래 메소드가 있는경우,반복문,if문 안에 hooks
+
+input있는 컴포넌트는 분리하는게 좋다
