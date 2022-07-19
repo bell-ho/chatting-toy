@@ -33,15 +33,17 @@ const CreateChannelModal = ({ show, onCloseModal, setShowCreateChannelModal }) =
       });
   }, [newChannel]);
 
-  return (<Modal show={show} onCloseModal={onCloseModal}>
-    <form onSubmit={onCreateChannel}>
-      <Label id='channel-label'>
-        <span>채널 이름</span>
-        <Input id='channel' value={newChannel} name='newChannel' onChange={onChange} />
-      </Label>
-      <Button>생성하기</Button>
-    </form>
-  </Modal>);
+  return (
+    <Modal show={show} onCloseModal={onCloseModal}>
+      <form onSubmit={onCreateChannel}>
+        <Label id='channel-label'>
+          <span>채널 이름</span>
+          <Input id='channel' value={newChannel} name='newChannel' onChange={onChange} />
+        </Label>
+        <Button>생성하기</Button>
+      </form>
+    </Modal>
+  );
 };
 
 export default CreateChannelModal;
