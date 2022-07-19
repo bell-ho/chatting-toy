@@ -42,7 +42,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userData) {
-      navigate('/workspace/channel');
+      navigate('/workspace/sleact/channel/일반');
     } else if (userData === undefined) {
       return <div>로딩중 ...</div>;
     }
