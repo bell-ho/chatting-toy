@@ -31,6 +31,8 @@ import { toast } from 'react-toastify';
 import CreateChannelModal from '@components/CreateChannelModal';
 import InviteWorkspaceModal from '@components/InviteWorkspaceModal';
 import InviteChannelModal from '@components/InviteChannelModal';
+import ChannelList from '@components/ChannelList';
+import DMList from '@components/DMList';
 
 const Workspace = ({ children }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -52,6 +54,13 @@ const Workspace = ({ children }) => {
     error: userDataError,
     mutate: userDataMute,
   } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
+
+  const {
+    data: memberData,
+    error: memberDataError,
+    mutate: memberDataMutate,
+  } = useSWR(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
+
   const {
     data: channelData,
     error: channelDataError,
@@ -86,8 +95,8 @@ const Workspace = ({ children }) => {
       const params = { workspace: newWorkspace, url: newUrl };
       axios
         .post(`/api/workspaces`, params, { withCredentials: true })
-        .then(() => {
-          userDataMute();
+        .then((res) => {
+          userDataMute(false, false);
           setShowCreateWorkspaceModal(false);
           reset();
         })
@@ -167,6 +176,8 @@ const Workspace = ({ children }) => {
                 <button onClick={onLogout}>로그아웃</button>
               </WorkspaceModal>
             </Menu>
+            {/*<ChannelList userData={userData} />*/}
+            <DMList userData={userData} />
             {channelData?.map((v) => (
               <div>{v.name}</div>
             ))}

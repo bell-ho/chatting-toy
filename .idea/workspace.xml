@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteWorkspaceModal/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +37,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "javascript.nodejs.core.library.configured.version": "14.17.4",
-    "javascript.nodejs.core.library.typings.version": "14.17.4",
+    "javascript.nodejs.core.library.configured.version": "16.15.0",
+    "javascript.nodejs.core.library.typings.version": "16.11.45",
     "jdk.selected.JAVA_MODULE": "azul-11",
     "last_opened_file_path": "C:/Users/drsoft/Documents/react-sleact/sleact/alecture/CreateChannelModal",
     "node.js.detected.package.eslint": "true",
@@ -92,6 +90,7 @@
       <workItem from="1657727524907" duration="2689000" />
       <workItem from="1657950184642" duration="13592000" />
       <workItem from="1658100648138" duration="1588000" />
+      <workItem from="1658326682247" duration="825000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
