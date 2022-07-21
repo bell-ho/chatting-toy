@@ -9,14 +9,16 @@ const DMList = () => {
   const [channelCollapse, setChannelCollapse] = useState(false);
   const [countList, setCountList] = useState({});
   const [onlineList, setOnlineList] = useState([]);
+
   const {
     data: userData,
     error,
     revalidate,
-    mutate,
+    userDataMute,
   } = useSWR('/api/users', fetcher, {
     dedupingInterval: 2000, // 2초
   });
+
   const { data: memberData } = useSWR(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
 
   const toggleChannelCollapse = useCallback(() => {

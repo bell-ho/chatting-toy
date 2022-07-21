@@ -27,3 +27,6 @@ preventDefault : form을 전송할땐 새로고침안되게 preventDefault 사�
 Invalid hook call 에러 : 리턴아래 메소드가 있는경우,반복문,if문 안에 hooks
 
 input있는 컴포넌트는 분리하는게 좋다
+
+## 0721
+컴포넌트 하나에 swr이 있다고해서 새로 요청하는게 아니다 => 캐싱되있는것을 가져옴

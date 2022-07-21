@@ -123,7 +123,9 @@ const Workspace = ({ children }) => {
     setShowCreateChannelModal(true);
   }, []);
 
-  const onClickInviteWorkspace = useCallback(() => {}, []);
+  const onClickInviteWorkspace = useCallback(() => {
+    setShowInviteWorkspaceModal(true);
+  }, []);
 
   // 리턴하는 함수는 맨아래에해야 에러 안남
   useEffect(() => {
@@ -176,11 +178,8 @@ const Workspace = ({ children }) => {
                 <button onClick={onLogout}>로그아웃</button>
               </WorkspaceModal>
             </Menu>
-            {/*<ChannelList userData={userData} />*/}
-            <DMList userData={userData} />
-            {channelData?.map((v) => (
-              <div>{v.name}</div>
-            ))}
+            <ChannelList />
+            <DMList />
           </MenuScroll>
         </Channels>
         <Chats>

@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
+import { CollapseButton } from '@components/DMList/styles';
+import useSWR from 'swr';
+import fetcher from '@utils/fetcher';
+import { NavLink, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 const ChannelList = () => {
+  const { workspace } = useParams();
+  const location = useLocation();
+  const [countList, setCountList] = useState({});
+
+  const {
+    data: userData,
+    error: userDataError,
+    mutate: userDataMute,
+  } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
+
+  const { data: channelData } = useSWR(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
+  const [channelCollapse, setChannelCollapse] = useState(false);
+
+  const toggleChannelCollapse = useCallback(() => {
+    setChannelCollapse((prev) => !prev);
+  }, []);
+
+  const resetCount = useCallback(() => {}, []);
+
   return (
     <>
       <h2>
