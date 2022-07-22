@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/hooks/useSocket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="소켓 이벤트 연결">
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Chat/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/Chat/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sleact/alecture/hooks/useInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChannelList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChannelList/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/DMList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/DMList/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChatList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatList/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/hooks/useInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/hooks/useInputs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/hooks/useSocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/hooks/useSocket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +28,6 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="c46a34db-01e5-4155-83f8-e5314e4be787" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,7 +60,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15527344",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "ts.external.directory.path": "C:\\Users\\이종호\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5921.22\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -107,7 +102,7 @@
       <workItem from="1658100648138" duration="1588000" />
       <workItem from="1658326682247" duration="2149000" />
       <workItem from="1658419975593" duration="2137000" />
-      <workItem from="1658461435507" duration="9282000" />
+      <workItem from="1658461435507" duration="13936000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
@@ -116,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657218654245</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="소켓 이벤트 연결">
+      <created>1658476692514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658476692514</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +144,8 @@
     <MESSAGE value="프로젝트 시작" />
     <MESSAGE value="로그인, 회원가입 컴포넌트 구현중" />
     <MESSAGE value="회원가입 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 구현중" />
+    <MESSAGE value="소켓 이벤트 연결" />
+    <option name="LAST_COMMIT_MESSAGE" value="소켓 이벤트 연결" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

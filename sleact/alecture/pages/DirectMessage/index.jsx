@@ -8,10 +8,11 @@ import ChatBox from '@components/ChatBox';
 import ChatList from '@components/ChatList';
 import useInputs from '@hooks/useInputs';
 import axios from 'axios';
+import useInput from '@hooks/useInput';
 
 const DirectMessage = () => {
   const { workspace, id } = useParams();
-  const [{ chat }, onChange, reset] = useInputs({ chat: '' });
+  const [chat, onChangeChat, setChat] = useInput('');
 
   const { data: userData } = useSWR(`/api/workspaces/${workspace}/users/${id}`, fetcher);
 
@@ -34,15 +35,14 @@ const DirectMessage = () => {
           .post(`/api/workspaces/${workspace}/dms/${id}/chats`, { content: chat })
           .then(() => {
             mutateChat(false, false);
-            reset();
           })
           .catch(console.error);
       }
     },
-    [chat],
+    [chat, id, mutateChat, workspace],
   );
 
-  if (!userData) {
+  if (!userData || !myData) {
     return null;
   }
 
@@ -52,8 +52,8 @@ const DirectMessage = () => {
         <img src={gravatar.url(userData.email, { s: '24px', d: 'retro' })} alt={userData.nickname} />
         <span>{userData.nickname}</span>
       </Header>
-      <ChatList />
-      <ChatBox chat={chat} onChangeChat={onChange} onSubmitForm={onSubmitForm} />
+      <ChatList chatData={chatData} />
+      <ChatBox chat={chat} onChangeChat={onChangeChat} onSubmitForm={onSubmitForm} />
     </Container>
   );
 };

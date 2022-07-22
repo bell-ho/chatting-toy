@@ -5,12 +5,13 @@ import { Button, Error, Form, Header, Input, Label, LinkContainer } from '@pages
 import { useNavigate, Link, NavLink } from 'react-router-dom';
 import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
+
 const Login = () => {
   const navigate = useNavigate();
   const {
     data: userData,
     error,
-    mutate,
+    mutateUserData,
   } = useSWR('/api/users', fetcher, {
     dedupingInterval: 100000,
   });
@@ -31,13 +32,13 @@ const Login = () => {
           },
         )
         .then((res) => {
-          mutate(res.data, false);
+          mutateUserData(false, false);
         })
         .catch((error) => {
           setLogInError(error.response?.data?.statusCode === 401);
         });
     },
-    [email, password],
+    [email, mutateUserData, password],
   );
 
   useEffect(() => {
@@ -46,11 +47,11 @@ const Login = () => {
     } else if (userData === undefined) {
       return <div>로딩중 ...</div>;
     }
-  }, [userData]);
+  }, [navigate, userData]);
 
   return (
     <div id="container">
-      <Header>Sleact</Header>
+      <Header>슬랙</Header>
       <Form onSubmit={onSubmit}>
         <Label id="email-label">
           <span>이메일 주소</span>

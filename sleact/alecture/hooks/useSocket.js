@@ -4,7 +4,6 @@ import { useCallback } from 'react';
 const backUrl = 'http://localhost:3095';
 const sockets = {};
 const useSocket = (workspace) => {
-  console.log(workspace);
   const disconnect = useCallback(() => {
     if (workspace) {
       sockets[workspace].disconnect();
