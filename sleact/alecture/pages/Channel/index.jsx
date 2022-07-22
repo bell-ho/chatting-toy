@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { Container, Header } from '@pages/Channel/styles';
 import useInputs from '@hooks/useInputs';
 import ChatList from '@components/ChatList';

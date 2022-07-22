@@ -1,9 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { CollapseButton } from '@components/DMList/styles';
 import useSWR from 'swr';
 import { useParams } from 'react-router';
 import fetcher from '@utils/fetcher';
 import { NavLink } from 'react-router-dom';
+import useSocket from '@hooks/useSocket';
+
 const DMList = () => {
   const { workspace } = useParams();
   const [channelCollapse, setChannelCollapse] = useState(false);
@@ -37,6 +39,32 @@ const DMList = () => {
     [],
   );
 
+  const onMessage = useCallback((data) => {
+    console.log('dm왔다', data);
+    setCountList((list) => {
+      return {
+        ...list,
+        [data.SenderId]: list[data.SenderId] ? list[data.SenderId] + 1 : 1,
+      };
+    });
+  }, []);
+
+  const [socket, disconnect] = useSocket(workspace);
+
+  useEffect(() => {
+    socket?.on('onlineList', (data) => {
+      setOnlineList(data);
+    });
+
+    socket?.on('dm', onMessage);
+    console.log('socket on dm', socket?.hasListeners('dm'));
+    return () => {
+      socket?.off('dm', onMessage); // 이벤트 리스너 정리
+      console.log('socket off dm', socket?.hasListeners('dm'));
+      socket?.off('onlineList');
+    };
+  }, [socket]);
+
   return (
     <>
       <h2>
@@ -57,7 +85,7 @@ const DMList = () => {
             return (
               <NavLink
                 key={member.id}
-                activeClassName="selected"
+                // activeClassName="selected"
                 to={`/workspace/${workspace}/dm/${member.id}`}
                 onClick={resetCount(member.id)}
               >

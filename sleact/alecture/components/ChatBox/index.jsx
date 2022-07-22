@@ -10,14 +10,18 @@ const ChatBox = ({ chat, onSubmitForm, onChangeChat, placeholder }) => {
     }
   }, []);
 
-  const onkeydownChat = useCallback((e) => {
-    if (e.key === 'Enter') {
-      if (!e.shiftKey) {
-        e.preventDefault();
-        onSubmitForm(e);
+  const onkeydownChat = useCallback(
+    (e) => {
+      if (e.key === 'Enter') {
+        if (!e.shiftKey) {
+          e.preventDefault();
+          onSubmitForm(e);
+        }
       }
-    }
-  }, []);
+    },
+    [onSubmitForm],
+  );
+
   return (
     <ChatArea>
       <Form onSubmit={onSubmitForm}>
