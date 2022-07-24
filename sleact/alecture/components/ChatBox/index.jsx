@@ -6,19 +6,11 @@ import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
 import { useParams } from 'react-router';
 import gravatar from 'gravatar';
+
 const ChatBox = ({ chat, onSubmitForm, onChangeChat, placeholder }) => {
   const { workspace } = useParams();
-  const {
-    data: userData,
-    error: userDataError,
-    mutate: userDataMute,
-  } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
-
-  const {
-    data: memberData,
-    error: memberDataError,
-    mutate: memberDataMutate,
-  } = useSWR(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
+  const { data: userData } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
+  const { data: memberData } = useSWR(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
 
   const textareaRef = useRef(null);
   useEffect(() => {

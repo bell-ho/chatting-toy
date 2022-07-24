@@ -1,9 +1,41 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ChatWrapper } from '@components/Chat/styles';
 import gravatar from 'gravatar';
 import dayjs from 'dayjs';
+import regexifyString from 'regexify-string';
+import { NavLink, useParams } from 'react-router-dom';
+
+const BACK_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3095' : 'https://sleact.nodebird.com';
+
 const Chat = ({ data }) => {
-  const user = data.Sender;
+  const user = 'Sender' in data ? data.Sender : data.User;
+  const { workspace } = useParams();
+
+  const result = useMemo(
+    () =>
+      // uploads\\서버주소
+      data.content.startsWith('uploads\\') || data.content.startsWith('uploads/') ? (
+        <img src={`${BACK_URL}/${data.content}`} style={{ maxHeight: 200 }} />
+      ) : (
+        regexifyString({
+          pattern: /@\[(.+?)]\((\d+?)\)|\n/g,
+          decorator(match, index) {
+            const arr = match.match(/@\[(.+?)]\((\d+?)\)/);
+            if (arr) {
+              return (
+                <NavLink key={match + index} to={`/workspace/${workspace}/dm/${arr[2]}`}>
+                  @{arr[1]}
+                </NavLink>
+              );
+            }
+            return <br key={index} />;
+          },
+          input: data.content,
+        })
+      ),
+    [data.content, workspace],
+  );
+
   return (
     <ChatWrapper>
       <div className="chat-img">
@@ -14,10 +46,10 @@ const Chat = ({ data }) => {
           <b>{user.nickname}</b>
           <span>{dayjs(data.createdAt).format('h:mm A')}</span>
         </div>
-        <p>{data.content}</p>
+        <p>{result}</p>
       </div>
     </ChatWrapper>
   );
 };
 
-export default Chat;
+export default React.memo(Chat);

@@ -2,23 +2,20 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useInputs from '@hooks/useInputs';
 import axios from 'axios';
 import { Button, Error, Form, Header, Input, Label, LinkContainer } from '@pages/SignUp/styles';
-import { useNavigate, Link, NavLink } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
+import { useParams } from 'react-router';
 
 const Login = () => {
   const navigate = useNavigate();
-  const {
-    data: userData,
-    error,
-    mutateUserData,
-  } = useSWR('/api/users', fetcher, {
+  const { data: userData, mutateUserData } = useSWR('/api/users', fetcher, {
     dedupingInterval: 100000,
   });
   const [logInError, setLogInError] = useState(false);
 
   const [{ email, password }, onChange, reset] = useInputs({ email: 'aa@aa.aa', password: 'aa' });
-
+  const { workspace, channel } = useParams();
   const onSubmit = useCallback(
     (e) => {
       e.preventDefault();
@@ -43,7 +40,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userData) {
-      navigate('/workspace/sleact/channel/일반');
+      navigate(`/workspace/sleact/channel/일반`);
     } else if (userData === undefined) {
       return <div>로딩중 ...</div>;
     }

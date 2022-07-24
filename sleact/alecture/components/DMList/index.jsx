@@ -12,12 +12,7 @@ const DMList = () => {
   const [countList, setCountList] = useState({});
   const [onlineList, setOnlineList] = useState([]);
 
-  const {
-    data: userData,
-    error,
-    revalidate,
-    userDataMute,
-  } = useSWR('/api/users', fetcher, {
+  const { data: userData } = useSWR('/api/users', fetcher, {
     dedupingInterval: 2000, // 2초
   });
 
@@ -40,7 +35,6 @@ const DMList = () => {
   );
 
   const onMessage = useCallback((data) => {
-    console.log('dm왔다', data);
     setCountList((list) => {
       return {
         ...list,
@@ -63,7 +57,7 @@ const DMList = () => {
       console.log('socket off dm', socket?.hasListeners('dm'));
       socket?.off('onlineList');
     };
-  }, [socket]);
+  }, [onMessage, socket]);
 
   return (
     <>
@@ -85,7 +79,7 @@ const DMList = () => {
             return (
               <NavLink
                 key={member.id}
-                // activeClassName="selected"
+                className={({ isActive }) => '' + (isActive ? 'selected' : '')}
                 to={`/workspace/${workspace}/dm/${member.id}`}
                 onClick={resetCount(member.id)}
               >
