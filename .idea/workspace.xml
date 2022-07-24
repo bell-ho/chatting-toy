@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="디엠 채팅 구현">
+    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="이미지 드래그 업로드">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/Chat/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/Chat/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/DMList/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/DMList/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/App/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/back/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/back/models/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1658326682247" duration="2149000" />
       <workItem from="1658419975593" duration="2137000" />
       <workItem from="1658461435507" duration="13936000" />
-      <workItem from="1658668097239" duration="4346000" />
+      <workItem from="1658668097239" duration="6891000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658654295679</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="이미지 드래그 업로드">
+      <created>1658672505512</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658672505512</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +168,8 @@
     <MESSAGE value="소켓 이벤트 연결" />
     <MESSAGE value="스크롤바 조절" />
     <MESSAGE value="디엠 채팅 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="디엠 채팅 구현" />
+    <MESSAGE value="이미지 드래그 업로드" />
+    <option name="LAST_COMMIT_MESSAGE" value="이미지 드래그 업로드" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

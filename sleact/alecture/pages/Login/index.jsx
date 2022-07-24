@@ -5,6 +5,7 @@ import { Button, Error, Form, Header, Input, Label, LinkContainer } from '@pages
 import { useNavigate, NavLink } from 'react-router-dom';
 import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
+import { useParams } from 'react-router';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Login = () => {
   const [logInError, setLogInError] = useState(false);
 
   const [{ email, password }, onChange, reset] = useInputs({ email: 'aa@aa.aa', password: 'aa' });
-
+  const { workspace, channel } = useParams();
   const onSubmit = useCallback(
     (e) => {
       e.preventDefault();
@@ -39,7 +40,7 @@ const Login = () => {
 
   useEffect(() => {
     if (userData) {
-      navigate('/workspace/sleact/channel/일반');
+      navigate(`/workspace/sleact/channel/일반`);
     } else if (userData === undefined) {
       return <div>로딩중 ...</div>;
     }

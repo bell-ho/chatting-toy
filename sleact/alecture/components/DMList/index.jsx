@@ -79,7 +79,7 @@ const DMList = () => {
             return (
               <NavLink
                 key={member.id}
-                // activeClassName="selected"
+                className={({ isActive }) => '' + (isActive ? 'selected' : '')}
                 to={`/workspace/${workspace}/dm/${member.id}`}
                 onClick={resetCount(member.id)}
               >

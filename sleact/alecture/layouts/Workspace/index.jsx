@@ -30,7 +30,6 @@ import useInputs from '@hooks/useInputs';
 import { toast } from 'react-toastify';
 import CreateChannelModal from '@components/CreateChannelModal';
 import InviteWorkspaceModal from '@components/InviteWorkspaceModal';
-import InviteChannelModal from '@components/InviteChannelModal';
 import ChannelList from '@components/ChannelList';
 import DMList from '@components/DMList';
 import useSocket from '@hooks/useSocket';
@@ -47,25 +46,10 @@ const Workspace = () => {
     newUrl: '',
   });
 
-  const { workspace } = useParams();
+  const { workspace, channel } = useParams();
 
-  const {
-    data: userData,
-    error: userDataError,
-    mutate: userDataMute,
-  } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
-
-  const {
-    data: memberData,
-    error: memberDataError,
-    mutate: memberDataMutate,
-  } = useSWR(userData ? `/api/workspaces/${workspace}/members` : null, fetcher);
-
-  const {
-    data: channelData,
-    error: channelDataError,
-    mutate: channelDataMutate,
-  } = useSWR(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
+  const { data: userData, mutate: userDataMute } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
+  const { data: channelData } = useSWR(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
 
   const [socket, disconnect] = useSocket(workspace);
 
@@ -173,7 +157,7 @@ const Workspace = () => {
         <Workspaces>
           {userData?.Workspaces.map((workspace) => {
             return (
-              <NavLink key={workspace.id} to={`/workspace/${123}/channel/일반`}>
+              <NavLink key={workspace.id} to={`/workspace/${workspace.url}/channel/일반`}>
                 <WorkspaceButton>{workspace.name.slice(0, 1).toUpperCase()}</WorkspaceButton>
               </NavLink>
             );

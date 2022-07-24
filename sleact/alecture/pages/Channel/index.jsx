@@ -12,6 +12,7 @@ import { toast } from 'react-toastify';
 import ChatList from '@components/ChatList';
 import ChatBox from '@components/ChatBox';
 import InviteChannelModal from '@components/InviteChannelModal';
+import { DragOver } from '@pages/DirectMessage/styles';
 
 const Channel = () => {
   const { workspace, channel } = useParams();
@@ -190,6 +191,7 @@ const Channel = () => {
         isReachingEnd={isReachingEnd}
       />
       <ChatBox chat={chat} onChangeChat={onChangeChat} onSubmitForm={onSubmitForm} />
+      {dragOver && <DragOver>업로드</DragOver>}
       <InviteChannelModal
         show={showInviteChannelModal}
         onCloseModal={onCloseModal}
