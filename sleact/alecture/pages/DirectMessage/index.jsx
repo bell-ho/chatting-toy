@@ -104,7 +104,7 @@ const DirectMessage = () => {
     return () => {
       socket?.off('dm', onMessage);
     };
-  }, [socket, id, myData]);
+  }, [socket, id, myData, onMessage]);
 
   //로딩 시 스크롤바 아래로
   useEffect(() => {
