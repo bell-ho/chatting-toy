@@ -1,5 +1,15 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "extends": [
-    "plugin:prettier/recommended"
-  ]
+    "plugin:prettier/recommended",
+    "react-app"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

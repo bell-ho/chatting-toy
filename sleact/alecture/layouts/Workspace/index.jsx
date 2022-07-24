@@ -33,8 +33,9 @@ import InviteWorkspaceModal from '@components/InviteWorkspaceModal';
 import InviteChannelModal from '@components/InviteChannelModal';
 import ChannelList from '@components/ChannelList';
 import DMList from '@components/DMList';
+import useSocket from '@hooks/useSocket';
 
-const Workspace = ({ children }) => {
+const Workspace = () => {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [showCreateChannelModal, setShowCreateChannelModal] = useState(false);
   const [showCreateWorkspaceModal, setShowCreateWorkspaceModal] = useState(false);
@@ -67,6 +68,21 @@ const Workspace = ({ children }) => {
     mutate: channelDataMutate,
   } = useSWR(userData ? `/api/workspaces/${workspace}/channels` : null, fetcher);
 
+  const [socket, disconnect] = useSocket(workspace);
+
+  useEffect(() => {
+    if (channelData && userData && socket) {
+      socket?.emit('login', { id: userData.id, channels: channelData.map((v) => v.id) });
+    }
+  }, [socket, channelData, userData]);
+
+  //연결 끊을때 : 워크스페이스 바뀔때
+  useEffect(() => {
+    return () => {
+      disconnect();
+    };
+  }, [disconnect, workspace]);
+
   const navigate = useNavigate();
   const onLogout = useCallback(() => {
     axios
@@ -76,7 +92,7 @@ const Workspace = ({ children }) => {
       .then(() => {
         userDataMute(false, false);
       });
-  }, []);
+  }, [userDataMute]);
 
   const onClickUserProfile = useCallback((e) => {
     e.stopPropagation();
@@ -105,7 +121,7 @@ const Workspace = ({ children }) => {
           toast.error(err.response?.data, { position: 'bottom-center' });
         });
     },
-    [newWorkspace, newUrl],
+    [newWorkspace, newUrl, userDataMute, reset],
   );
 
   const onCloseModal = useCallback(() => {
@@ -132,7 +148,7 @@ const Workspace = ({ children }) => {
     if (!userData) {
       return navigate('/login');
     }
-  }, [userData]);
+  }, [navigate, userData]);
 
   return (
     <div>
@@ -155,7 +171,6 @@ const Workspace = ({ children }) => {
           </span>
         </RightMenu>
       </Header>
-      <button onClick={onLogout}>로그아웃</button>
       <WorkspaceWrapper>
         <Workspaces>
           {userData?.Workspaces.map((workspace) => {
@@ -215,11 +230,11 @@ const Workspace = ({ children }) => {
         setShowInviteWorkspaceModal={setShowInviteWorkspaceModal}
       />
 
-      <InviteChannelModal
-        show={showInviteChannelModal}
-        onCloseModal={onCloseModal}
-        setShowInviteChannelModal={setShowInviteChannelModal}
-      />
+      {/*<InviteChannelModal*/}
+      {/*  show={showInviteChannelModal}*/}
+      {/*  onCloseModal={onCloseModal}*/}
+      {/*  setShowInviteChannelModal={setShowInviteChannelModal}*/}
+      {/*/>*/}
     </div>
   );
 };

@@ -44,7 +44,7 @@ const ChannelList = () => {
             return (
               <NavLink
                 key={channel.name}
-                activeClassName="selected"
+                // activeClassName="selected"
                 to={`/workspace/${workspace}/channel/${channel.name}`}
                 onClick={resetCount(`c-${channel.id}`)}
               >
