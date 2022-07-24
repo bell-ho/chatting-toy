@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중">
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatList/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatList/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="회원가입 구현중" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +88,7 @@
       <workItem from="1657950184642" duration="13592000" />
       <workItem from="1658100648138" duration="1588000" />
       <workItem from="1658326682247" duration="2149000" />
-      <workItem from="1658419975593" duration="2137000" />
+      <workItem from="1658419975593" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
