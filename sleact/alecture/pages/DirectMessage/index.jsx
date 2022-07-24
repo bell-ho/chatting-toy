@@ -10,12 +10,17 @@ import axios from 'axios';
 import useInput from '@hooks/useInput';
 import makeSection from '@utils/makeSection';
 import useSWRInfinite from 'swr/infinite';
+import useSocket from '@hooks/useSocket';
+import { toast } from 'react-toastify';
+
 const DirectMessage = () => {
   const { workspace, id } = useParams();
   const [chat, onChangeChat, setChat] = useInput('');
   const scrollbarRef = useRef(null);
 
   const { data: userData } = useSWR(`/api/workspaces/${workspace}/users/${id}`, fetcher);
+
+  const [socket] = useSocket(workspace);
 
   const {
     data: chatData,
@@ -26,11 +31,7 @@ const DirectMessage = () => {
     fetcher,
   );
 
-  const {
-    data: myData,
-    error: myDataError,
-    mutate: myDataMute,
-  } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
+  const { data: myData } = useSWR('/api/users', fetcher, { dedupingInterval: 2000 });
 
   const isEmpty = chatData?.[0]?.length === 0;
   const isReachingEnd = isEmpty || (chatData && chatData[chatData.length - 1]?.length < 20) || false;
@@ -69,6 +70,41 @@ const DirectMessage = () => {
     [chat, chatData, id, mutateChat, myData, setChat, userData, workspace],
   );
   const chatSections = makeSection(chatData ? chatData.flat().reverse() : []);
+
+  const onMessage = useCallback(
+    (data) => {
+      if (data.SenderId === Number(id) && myData.id !== Number(id)) {
+        mutateChat((chatData) => {
+          chatData?.[0].unshift(data);
+          return chatData;
+        }, false).then(() => {
+          if (scrollbarRef.current) {
+            if (
+              scrollbarRef.current.getScrollHeight() <
+              scrollbarRef.current.getClientHeight() + scrollbarRef.current.getScrollTop() + 150
+            ) {
+              scrollbarRef.current.scrollToBottom();
+            } else {
+              toast.success('새 메시지가 도착했습니다.', {
+                onClick() {
+                  scrollbarRef.current?.scrollToBottom();
+                },
+                closeOnClick: true,
+              });
+            }
+          }
+        });
+      }
+    },
+    [id, mutateChat, myData.id],
+  );
+
+  useEffect(() => {
+    socket?.on('dm', onMessage);
+    return () => {
+      socket?.off('dm', onMessage);
+    };
+  }, [socket, id, myData]);
 
   //로딩 시 스크롤바 아래로
   useEffect(() => {
