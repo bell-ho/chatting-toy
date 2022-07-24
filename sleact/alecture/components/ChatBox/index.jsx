@@ -6,6 +6,7 @@ import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
 import { useParams } from 'react-router';
 import gravatar from 'gravatar';
+
 const ChatBox = ({ chat, onSubmitForm, onChangeChat, placeholder }) => {
   const { workspace } = useParams();
   const {
