@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="디엠 채팅 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/InviteWorkspaceModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteWorkspaceModal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/Menu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/Chat/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/Chat/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/layouts/Workspace/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Channel/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Channel/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +39,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "javascript.nodejs.core.library.configured.version": "14.17.4",
-    "javascript.nodejs.core.library.typings.version": "14.17.4",
+    "javascript.nodejs.core.library.configured.version": "16.15.0",
+    "javascript.nodejs.core.library.typings.version": "16.11.45",
     "jdk.selected.JAVA_MODULE": "azul-11",
     "last_opened_file_path": "C:/Users/drsoft/Documents/react-sleact/sleact/alecture/CreateChannelModal",
     "node.js.detected.package.eslint": "true",
@@ -96,6 +95,7 @@
       <workItem from="1658326682247" duration="2149000" />
       <workItem from="1658419975593" duration="2137000" />
       <workItem from="1658461435507" duration="13936000" />
+      <workItem from="1658668097239" duration="4346000" />
     </task>
     <task id="LOCAL-00001" summary="웹팩 설정">
       <created>1657218654245</created>
