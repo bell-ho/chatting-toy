@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c650b44-5cad-444a-bda7-a594b4933b90" name="Changes" comment="디엠 채팅 구현">
-      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/DirectMessage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/ChatBox/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/CreateChannelModal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteChannelModal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/InviteWorkspaceModal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/InviteWorkspaceModal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/components/Menu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/components/Menu/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/Login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/sleact/alecture/pages/SignUp/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658654271346</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="디엠 채팅 구현">
+      <created>1658654295679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658654295679</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

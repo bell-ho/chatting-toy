@@ -33,7 +33,7 @@ const InviteWorkspaceModal = ({ show, onCloseModal, setShowInviteWorkspaceModal 
           toast.error(err.response?.data, { position: 'bottom-center' });
         });
     },
-    [newMember],
+    [newMember, reset, revalidateMember, setShowInviteWorkspaceModal, workspace],
   );
 
   return (

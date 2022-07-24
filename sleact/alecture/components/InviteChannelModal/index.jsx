@@ -38,7 +38,7 @@ const InviteChannelModal = ({ show, onCloseModal, setShowInviteChannelModal }) =
           toast.error(error.response?.data, { position: 'bottom-center' });
         });
     },
-    [newMember],
+    [channel, newMember, reset, revalidateMembers, setShowInviteChannelModal, workspace],
   );
 
   return (

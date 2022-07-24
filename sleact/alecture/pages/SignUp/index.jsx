@@ -4,7 +4,7 @@ import useInputs from '@hooks/useInputs';
 import axios from 'axios';
 import useSWR from 'swr';
 import fetcher from '@utils/fetcher';
-import { useNavigate, Link, NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const SignUp = () => {
           .finally(() => {});
       }
     },
-    [email, nickname, password, passwordCheck, misMatchError],
+    [email, nickname, password, misMatchError],
   );
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const SignUp = () => {
     } else if (userData === undefined) {
       return <div>로딩중 ...</div>;
     }
-  }, [userData]);
+  }, [navigate, userData]);
 
   return (
     <div id="container">
