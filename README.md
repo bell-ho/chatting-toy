@@ -8,6 +8,7 @@
 프로젝트 개요/동기
 </p>
 
+
 <p align="center">
 GIF Images
 </p>
